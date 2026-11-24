@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة الطقس</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="dashboard">
+    <h1>لوحة الطقس</h1>
+
+    <form id="search-form" class="search">
+      <input id="city-input" type="text" placeholder="اكتب المدينة بالإنجليزي، مثل Riyadh" autocomplete="off">
+      <button type="submit">ابحث</button>
+    </form>
+    <div id="recent" class="recent"></div>
+
+    <p id="status" class="status" aria-live="polite"></p>
+    <div id="spinner" class="spinner" hidden></div>
+
+    <section id="current" class="current" hidden>
+      <div class="current-main">
+        <span id="icon" class="icon"></span>
+        <div>
+          <h2 id="city-name"></h2>
+          <p id="description"></p>
+        </div>
+        <p id="temp" class="temp"></p>
+      </div>
+      <ul class="details">
+        <li>الإحساس الفعلي: <span id="feels"></span></li>
+        <li>الرطوبة: <span id="humidity"></span></li>
+        <li>الرياح: <span id="wind"></span></li>
+      </ul>
+      <p id="drink" class="drink"></p>
+    </section>
+
+    <section id="forecast-section" hidden>
+      <h3>توقعات 5 أيام</h3>
+      <ul id="forecast" class="forecast"></ul>
+    </section>
+
+    <p class="credit">بيانات الطقس من <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a></p>
+  </main>
+</body>
+</html>
